@@ -14,7 +14,7 @@ def get_possible_dimensions(path):
         np.mod(pixel_count, length_array) == 0
     ]
     widths = widths[
-        (widths <= 800) & (widths >= 40)
+        (widths <= 1024) & (widths >= 40)
     ].astype(int)
 
     combinations = np.dstack(np.meshgrid(widths, widths)).reshape(-1, 2)

@@ -37,3 +37,12 @@ python guesser.py image.bin
 
 the command will try to guess the image size and output `image.png` in
 the current directory.
+
+
+BMP files
+
+ffmpeg -vcodec bmp -i /path/to/texture-file.bmp -vcodec rawvideo -f rawvideo -pix_fmt rgb565 texture.raw
+
+PNG files
+
+ffmpeg -vcodec png -i /path/to/texture-file.png -vcodec rawvideo -f rawvideo -pix_fmt rgb565 texture.raw
